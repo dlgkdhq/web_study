@@ -11,18 +11,18 @@ public class Practice01Controller {
 
 	@RequestMapping("/main")
 	public String main() {
-		return "practice01/main";
+		return "practice/practice01/main";
 	}
 	
 	//@RequestMapping("/product/mouse")
 	@RequestMapping(value = "/product/mouse", method = RequestMethod.GET)
 	public String mouse() {
-		return "practice01/product/mouse";
+		return "practice/practice01/product/mouse";
 	}
 	
 	//@RequestMapping("/product/keyboard")
 	@GetMapping("/product/keyboard")
 	public String keyboard() {
-		return "practice01/product/keyboard";
+		return "practice/practice01/product/keyboard";
 	}
 }
