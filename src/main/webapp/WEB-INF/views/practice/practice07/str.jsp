@@ -32,7 +32,7 @@
 	</c:forEach>
 	
 	<!-- 리스트 단위로 전달된 메시지 반복 -->
-	<c:forEach var="m" items=${msgList}>
+	<c:forEach var="m" items="${msgList}">
 		<p>${m}</p>
 	</c:forEach>
 	
