@@ -52,4 +52,10 @@ public class RoomServiceImpl implements RoomService {
 	
 		return result;
 	}
+
+	@Override
+	public Room findRoomByRoomId(int roomId) {
+		Room room = roomDAO.findRoomByRoomId(roomId);
+		return room;
+	}
 }
