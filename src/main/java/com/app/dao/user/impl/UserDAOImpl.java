@@ -17,6 +17,13 @@ public class UserDAOImpl implements UserDAO {
 	SqlSessionTemplate sqlSessionTemplate;
 
 	@Override
+	public int saveUser(User user) {
+		int result = sqlSessionTemplate.insert("user_mapper.saveUser", user);
+		
+		return result;
+	}
+
+	@Override
 	public List<User> findUserList() {
 		
 		List<User> userList = sqlSessionTemplate.selectList("user_mapper.findUserList");
@@ -24,11 +31,4 @@ public class UserDAOImpl implements UserDAO {
 		return userList;
 	}
 
-	@Override
-	public int saveUser(User user) {
-		int result = sqlSessionTemplate.insert("user_mapper.saveUser", user);
-		
-		return result;
-	}
-	
 }

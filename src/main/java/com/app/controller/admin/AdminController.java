@@ -89,4 +89,13 @@ public class AdminController {
 		return "admin/addUser";
 		
 	}
+	
+	@GetMapping("/admin/users")
+	public String users(Model model) {
+		List<User> userList = userService.findUserList();
+	
+		model.addAttribute("userList", userList);
+		
+		return "admin/users";
+	}
 }
