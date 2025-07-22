@@ -25,4 +25,10 @@
 		SELECT * FROM T_ROOM
 		where room_id = #{roomId}
 	</select>
+	
+	<delete id="removeRoom" parameterType="int">
+		DELETE FROM T_ROOM
+		where room_id = #{roomId}
+	</delete>
+	
 </mapper>
