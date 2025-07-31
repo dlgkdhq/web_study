@@ -9,11 +9,11 @@ import lombok.Data;
 public class User {
 
 	//필수입력. 빈칸 X
-	@NotBlank(message = "이거 아이디 필수얀")
+	//@NotBlank(message = "이거 아이디 필수얀")
 	String id;
 	
 	//입력 길이 제한
-	@Size(min = 8, max = 12, message = "비번 길이 확인바람")
+	//@Size(min = 8, max = 12, message = "비번 길이 확인바람")
 	String pw;
 	String name;
 	String userType;	//CUS / ADM
