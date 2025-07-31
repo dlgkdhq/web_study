@@ -23,6 +23,7 @@ public class AdminInterceptor implements HandlerInterceptor{
 		//admin 경로로 시작하는 관리자 페이지에 접속하는 경우
 		
 		//로그인O + 로그인한 계정이 관리자 계정(ADM)
+		/*
 		if(LoginManager.isLogin(request)) { //로그인O
 			//관리자 여부 ADM 인지?
 			String userId = LoginManager.getLoginUserId(request);
@@ -43,8 +44,8 @@ public class AdminInterceptor implements HandlerInterceptor{
 			//response.sendRedirect("/admin/login");
 			response.sendRedirect("/error/badAccess");	//잘못된 접근이라고 보여주는 화면으로 연결
 			return false;
-		}
+		}*/
 		
-		
+		return HandlerInterceptor.super.preHandle(request, response, handler);
 	}
 }
